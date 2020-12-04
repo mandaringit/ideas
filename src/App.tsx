@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Bin2Dec from "./features/Bin2Dec/Bin2Dec";
 import BorderRadiusPreviewer from "./features/BorderRadiusPreviewer/BorderRadiusPreviewer";
 import Calculator from "./features/Calculator/Calculator";
+import ChristmasLights from "./features/ChristmasLights/ChristmasLights";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/bin2dec' component={Bin2Dec} />
         <Route path='/border-radius' component={BorderRadiusPreviewer} />
         <Route path='/calculator' component={Calculator} />
+        <Route path='/christmaslights' component={ChristmasLights} />
       </Switch>
     </Router>
   );

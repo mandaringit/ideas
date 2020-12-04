@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Caculator.css";
+import styled from "styled-components";
 
 const Caculator = () => {
   const [calcStack, setCalcStack] = useState<[number, string][]>([]);
@@ -45,7 +45,7 @@ const Caculator = () => {
     ));
 
   return (
-    <div className='container'>
+    <Container>
       <div className='display'>
         <span className='display__number'>
           {displayNumber > 99999999 ? "ERR" : displayNumber}
@@ -87,8 +87,73 @@ const Caculator = () => {
           =
         </button>
       </div>
-    </div>
+    </Container>
   );
 };
 
 export default Caculator;
+
+const Container = styled.div`
+  max-width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1px;
+
+  .display {
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem 0.3rem 0.3rem 0.3rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .display__number {
+    color: white;
+    font-size: 3rem;
+  }
+
+  button {
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border-radius: 3px;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:hover {
+    opacity: 0.7;
+  }
+
+  .button__container {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 50px);
+  }
+
+  .button__feature {
+    background-color: #616161;
+  }
+  .button__number {
+    background-color: #9e9e9e;
+  }
+
+  .button__operator {
+    background-color: #ffa000;
+  }
+
+  .button__zero {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+`;

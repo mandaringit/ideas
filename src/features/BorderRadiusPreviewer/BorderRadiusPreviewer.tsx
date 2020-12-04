@@ -1,5 +1,5 @@
 import React, { createRef, useState } from "react";
-import "./BorderRadiusPreviewer.css";
+import styled from "styled-components";
 
 const BorderRadiusPreviewr = () => {
   const box = createRef<HTMLTextAreaElement>();
@@ -20,7 +20,7 @@ const BorderRadiusPreviewr = () => {
   };
 
   return (
-    <div className='container'>
+    <Container>
       <button onClick={onCopy}>copy</button>
       <div className='grid'>
         <div className='grid-tl'>
@@ -75,8 +75,63 @@ const BorderRadiusPreviewr = () => {
           />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
 export default BorderRadiusPreviewr;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .grid-tl {
+    grid-area: topLeft;
+  }
+  .grid-tr {
+    grid-area: topRight;
+  }
+  .grid-bl {
+    grid-area: bottomLeft;
+  }
+  .grid-br {
+    grid-area: bottomRight;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "topLeft . topRight"
+      ". box ."
+      "bottomLeft . bottomRight";
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #d3d3d3;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+  }
+
+  .box {
+    width: 300px;
+    height: 300px;
+    grid-area: box;
+    /* border: 1px solid black; */
+    background-color: rosybrown;
+  }
+`;
