@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Bin2Dec from "./features/Bin2Dec/Bin2Dec";
 import BorderRadiusPreviewer from "./features/BorderRadiusPreviewer/BorderRadiusPreviewer";
 import Calculator from "./features/Calculator/Calculator";
+import CauseEffect from "./features/CauseEffect/CauseEffect";
 import ChristmasLights from "./features/ChristmasLights/ChristmasLights";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/border-radius' component={BorderRadiusPreviewer} />
         <Route path='/calculator' component={Calculator} />
         <Route path='/christmaslights' component={ChristmasLights} />
+        <Route path='/causeeffect' component={CauseEffect} />
       </Switch>
     </Router>
   );

@@ -1,0 +1,39 @@
+body {
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+nav > ul {
+  list-style: none;
+}
+
+li + li {
+  margin-top: 1rem;
+}
+
+section {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.person__item {
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+.person__item:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}

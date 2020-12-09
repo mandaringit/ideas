@@ -21,6 +21,9 @@ const Navbar = () => {
         <li>
           <Link to='/christmaslights'>ChristmasLights</Link>
         </li>
+        <li>
+          <Link to='/causeeffect'>CauseEffect</Link>
+        </li>
       </ul>
     </StyledNav>
   );
