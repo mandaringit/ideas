@@ -33,24 +33,37 @@ export default Navbar;
 
 const StyledNav = styled.nav`
   background-color: black;
-  height: 4rem;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  height: 100%;
 
   ul {
     list-style-type: none;
-    display: flex;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  li + li {
-    margin-left: 1rem;
+  li {
+    background-color: #f37a48;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 5px;
   }
+
+  /* li + li {
+    margin-left: 1rem;
+  } */
 
   a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;
