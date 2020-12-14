@@ -24,6 +24,9 @@ const Navbar = () => {
         <li>
           <Link to='/causeeffect'>CauseEffect</Link>
         </li>
+        <li>
+          <Link to='/countdowntimer'>CountdownTimer</Link>
+        </li>
       </ul>
     </StyledNav>
   );

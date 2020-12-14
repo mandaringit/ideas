@@ -7,6 +7,7 @@ import BorderRadiusPreviewer from "./features/BorderRadiusPreviewer/BorderRadius
 import Calculator from "./features/Calculator/Calculator";
 import CauseEffect from "./features/CauseEffect/CauseEffect";
 import ChristmasLights from "./features/ChristmasLights/ChristmasLights";
+import CountdownTimer from "./features/CountdownTimer/CountdownTimer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/calculator' component={Calculator} />
         <Route path='/christmaslights' component={ChristmasLights} />
         <Route path='/causeeffect' component={CauseEffect} />
+        <Route path='/countdowntimer' component={CountdownTimer} />
       </Switch>
     </Router>
   );
@@ -29,5 +31,8 @@ export default App;
 const GlobalStyle = createGlobalStyle`
   html,body,#root{
     height:100%;
+  }
+  body{
+    margin:0;
   }
 `;
